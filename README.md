@@ -20,13 +20,13 @@ When defined, check with your coach before you continue.
 Now that we defined our bounded context, we can create for each bounded context a Spring Boot project.
 
 * Go to [Spring Initializr](https://start.spring.io/)
-You can reference to the dependencies of this project for adding it to the new Spring Boot project.
+* You can reference to the dependencies of this project for adding it to the new Spring Boot project.
 * Generate the project and unzip
 * Place the folder in your local git folder and open with Intellij
 
 ## Strategy 2: Each service has its own database
 To have your own database for each service it enables developers to use the type of database that is best suited for the service's needs. 
-But it comes with more complexity, like what do we with coupled transactions in a distributed system? 
+But it comes with more complexity by managing each database
  
 ### Exercise
 * Copy the code from the monolith in the proper service.
