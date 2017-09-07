@@ -30,6 +30,7 @@ But it comes with more complexity by managing each database.
  
 ### Exercise
 * Copy the code of the domain from the monolith in the proper service.
+* Copy the necessary dependencies from the monoliths pom into the services pom.
 * Refactor the JPA entities so they are not coupled anymore.
 * Replace the properties file with a yml file and configure the in memory database (H2)
 * Configure the name of the application (We will be needing it later on)
