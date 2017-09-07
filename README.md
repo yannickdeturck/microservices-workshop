@@ -25,13 +25,20 @@ Now that we defined our bounded context, we can create for each bounded context 
 * Place the folder in your local git folder and open with Intellij
 
 ## Strategy 2: Each service has its own database
-To have your own database for each service it enables developers to use the type of database that is best suited for the service's needs. 
-But it comes with more complexity by managing each database
+To have your own database for each service enables developers to use the type of database that is best suited for the service's needs. 
+But it comes with more complexity by managing each database.
  
 ### Exercise
-* Copy the code from the monolith in the proper service.
+* Copy the code of the domain from the monolith in the proper service.
 * Refactor the JPA entities so they are not coupled anymore.
+* Replace the properties file with a yml file and configure the in memory database (H2)
+* Configure the name of the application (We will be needing it later on)
+* Configure a different port on each service
+* Create the import.sql in each service and input the data you got from the monolith
 
+## End Result
+Run your services and go to your localhost:<port server>/<entities>
+You should see a list of data in each service. 
 
 ### Next step
  ```sh

@@ -1,4 +1,4 @@
-package be.ordina.monolith.model;
+package be.ordina.monolith.movie;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -6,21 +6,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
-import javax.persistence.Transient;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
 public class Movie implements Serializable {
 
 	@Id
-	@Column
+	@Column(name = "uuid")
 	private UUID uuid;
 
 	@Column(unique = true)
@@ -28,7 +24,8 @@ public class Movie implements Serializable {
 	private int runtime;
 	private String format;
 	private String plot;
-	private LocalDateTime release;
+
+	private LocalDate release;
 	private UUID rental;
 
 	@PrePersist
@@ -82,11 +79,11 @@ public class Movie implements Serializable {
 		this.plot = plot;
 	}
 
-	public LocalDateTime getRelease() {
+	public LocalDate getRelease() {
 		return release;
 	}
 
-	public void setRelease(LocalDateTime release) {
+	public void setRelease(LocalDate release) {
 		this.release = release;
 	}
 

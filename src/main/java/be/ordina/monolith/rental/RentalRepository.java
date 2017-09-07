@@ -1,6 +1,5 @@
-package be.ordina.monolith.repository;
+package be.ordina.monolith.rental;
 
-import be.ordina.monolith.model.Rental;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
