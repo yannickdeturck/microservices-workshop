@@ -50,10 +50,37 @@ You should see a list of data in each service.
 
 
 
+# Chapter 2: Service Registry 
+Since we are working with a distributed system, the services don't know of each other existence.
+So how do we let the services discover each other for querying data, etc...? 
+To tackle this issue, Spring Cloud provides us the ability to register our services with Eureka.
+Eureka as a service is comparable to a phone book for your microservices.
+Each service registers itself with the service registry and tells the registry where it lives.
+
+## Exercise
+* Go to [Spring Initializr](https://start.spring.io/)
+* Name the project eureka.
+* Add the Eureka Server dependency.
+* Generate, unzip and add it to your local git folder.
+* Change your properties file to a yml file.
+* Configure the Eureka Server
+* Link the two microservices to the Eureka server by making them a Eureka Client. 
+* Have a different port when running.
+* Run the three applications.
+
+### [Documentation](http://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/1.3.4.RELEASE/)
+
+If you found the solution, the logs will tell you that they register themselves with Eureka.
+
+## End result
+* Go to the Eureka application: localhost:<port> 
+* You should now see an UI Eureka dashboard with both the microservices registered.
 
 
-
-
+## Next step
+ ```sh
+   git checkout chpt3-ConfigServer
+   ```
 
 
 
