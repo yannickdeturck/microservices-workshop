@@ -1,3 +1,5 @@
+External config project: https://github.com/yannickdeturck/microservices-workshop-config
+
 # Chapter 1: Refactoring to microservices
 To understand what microservices are, we will start from a more comfortable project and tranform it to a distributed system. 
 The process of transforming is a form of application modernization. Developers have been doing it for decades and as a result,
